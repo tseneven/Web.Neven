@@ -1,0 +1,85 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/backgroung.png'); /* Путь к изображению */
+    background-size: cover; /* Масштабировать изображение, чтобы покрыть весь фон */
+    background-position: center; /* Центрировать изображение */
+    filter: blur(10px); /* Замылить изображение */
+    z-index: -1; /* Разместить фон позади других элементов */
+    transition: all 0.5s ease-in-out; /* Плавное уменьшение фона */
+}
+.centered-text {
+    margin-top: 100px;
+    text-align: center; /* Центрирование текста */
+    font-family: Comic Sans MS, Comic Sans, cursive; /* Шрифт */
+    font-size: 40px; /* Размер текста */
+    color: #000000; /* Цвет текста */
+}
+.main-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh; /* Изначальная высота основного окна */
+    background-color: #141414;
+    border-radius: 20px 20px 0 0; /* Закруглённые углы сверху */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Прокрутка внутри основного контента */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    transition: height 0.3s ease-in-out; /* Плавный переход */
+}
+
+/* Для всей страницы: прокручиваемое содержимое */
+body {
+    overflow-y: auto; /* Прокрутка основного документа */
+    height: 200vh; /* Увеличенная высота для демонстрации прокрутки */
+}
+.image-row {
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение */
+    gap: 20px; /* Отступы между окнами */
+    margin-bottom: 20px;
+}
+
+/* Каждое окно с изображением */
+.image-box {
+    flex: 1;
+    max-width: 30%; /* Ограничение ширины */
+    background-color: #000000; /* Светлый фон */
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Отступ между изображением и текстом */
+    filter: blur(3px);
+}
+
+.image-box p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+.image-box h1 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
