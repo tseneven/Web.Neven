@@ -2,6 +2,13 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    flex-direction: column;
+    display: flex; /* Включаем Flexbox */
+    flex-direction: column; /* Вертикальная ориентация */
+    justify-content: flex-start; /* Ставим элементы сверху */
+    align-items: center; /* Центрируем горизонтально */
+    height: 100%;
+    margin: 0;
 }
 
 .background {
@@ -18,26 +25,29 @@ body, html {
     transition: all 0.5s ease-in-out; /* Плавное уменьшение фона */
 }
 .centered-text {
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center; /* Центрирование текста */
     font-family: Comic Sans MS, Comic Sans, cursive; /* Шрифт */
     font-size: 40px; /* Размер текста */
     color: #000000; /* Цвет текста */
 }
+.lower-text{
+    text-align: center;
+    font-family: Comic Sans MS, Comic Sans, cursive; /* Шрифт */
+    font-size: 30px; /* Размер текста */
+}
 .main-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-top: 3vw; /* Подталкиваем к низу */
     width: 100%;
-    height: 70vh; /* Изначальная высота основного окна */
+    height: auto; /* Высота адаптивная, заполняет оставшееся место */
     background-color: #141414;
-    border-radius: 20px 20px 0 0; /* Закруглённые углы сверху */
+    border-radius: 20px 20px 0 0;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; /* Прокрутка внутри основного контента */
-    padding: 20px;
+    padding: 25px;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
+    flex-grow: 1; /* Растягивается на всё доступное пространство */
     transition: height 0.3s ease-in-out; /* Плавный переход */
 }
 
@@ -58,7 +68,7 @@ body {
     flex: 1;
     max-width: 30%; /* Ограничение ширины */
     background-color: #000000; /* Светлый фон */
-    border-radius: 10px;
+    border-radius: 20px 20px;
     text-align: center;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
@@ -72,14 +82,51 @@ body {
 }
 
 .image-box p {
-    font-size: 16px;
+    font-size: 23px;
     font-weight: bold;
     color: #ffffff;
     margin: 0;
 }
 .image-box h1 {
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 15px;
     color: #ffffff;
     margin: 0;
+}
+.image-box h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 40px;
+}
+a {
+    color: #6c757d; /* Цвет ссылки по умолчанию */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+a:hover {
+    color: #6c757d;; /* Цвет ссылки при наведении */
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+a:visited {
+    color: #6c757d; /* Цвет для посещённой ссылки */
+}
+
+a:active {
+    color: #ff0000; /* Цвет для активной (нажатой) ссылки */
+}
+hr {
+    border: 0; /* Убираем стандартную границу */
+    height: 2px; /* Толщина линии */
+    background-color: #ffffff; /* Цвет линии */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+.copirate-text {
+    color:#080000;
+    text-align: right;
+}
+.zabavniy-kot.gif {
+    height: 32px; /* Задаём нужную высоту */
+    width: 32px;  /* Задаём нужную ширину */
+    object-fit: contain;  /* Сохраняем пропорции, но ограничиваем размер */
 }
